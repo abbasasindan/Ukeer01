@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         // 2. JUMP LOGIC
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
         // 3. COMBAT LOGIC (Left Click / Ctrl)
@@ -76,13 +76,13 @@ public class PlayerController : MonoBehaviour
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
 
         // Apply Movement
-        rb.velocity = new Vector2(horizontalInput * currentSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(horizontalInput * currentSpeed, rb.linearVelocity.y);
     }
 
     void Attack()
     {
         // Optional: Stop moving when attacking (gives weight to the punch)
-        rb.velocity = new Vector2(0, rb.velocity.y);
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
 
         // Trigger the animation
         anim.SetTrigger("Attack");
