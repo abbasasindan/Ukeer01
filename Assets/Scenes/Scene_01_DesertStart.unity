@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 2514534}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.426, y: -2.806, z: 0}
+  m_LocalPosition: {x: -0.065, y: -0.772, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -598,7 +598,7 @@ Transform:
   m_GameObject: {fileID: 545266595}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.2387, y: -0.24, z: 0}
+  m_LocalPosition: {x: -9.31, y: -0.31, z: 0}
   m_LocalScale: {x: 1.4625, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1000,6 +1000,7 @@ GameObject:
   - component: {fileID: 624551767}
   - component: {fileID: 624551766}
   - component: {fileID: 624551771}
+  - component: {fileID: 624551772}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1067,7 +1068,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.46, y: 5.76}
+    oldSize: {x: 0.4, y: 1.4}
     newSize: {x: 1.46, y: 5.76}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1090,7 +1091,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1149,7 +1150,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1320481435402747707, guid: 643c0bd9ee5d63e449774aca0f2ebd4a, type: 3}
+  m_Sprite: {fileID: -4337611752043588004, guid: e14a8827a5cebef4996ca8922646af60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1169,8 +1170,8 @@ Transform:
   m_GameObject: {fileID: 624551765}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.73, y: -1.04, z: 0}
-  m_LocalScale: {x: 0.66412, y: 0.66412, z: 0.66412}
+  m_LocalPosition: {x: -9.87, y: -1.48, z: 0}
+  m_LocalScale: {x: 2.2, y: 2.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2514535}
@@ -1196,7 +1197,20 @@ MonoBehaviour:
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+--- !u!114 &624551772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624551765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922be57ff98a41b4694e8a7af1d0afb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteScaleCorrector
+  scaleFactor: 1.25
 --- !u!1 &790092080
 GameObject:
   m_ObjectHideFlags: 0

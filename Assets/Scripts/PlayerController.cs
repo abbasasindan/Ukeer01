@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // === HEADER SETTINGS ===
     [Header("Movement Settings")]
     public float walkSpeed = 3f;
     public float runSpeed = 6f;
@@ -11,9 +12,9 @@ public class PlayerController : MonoBehaviour
     public float attackCooldown = 0.5f; // Time between punches
 
     [Header("Ground Detection")]
-    public Transform groundCheck;   // Drag the 'GroundCheck' object here
+    public Transform groundCheck;   // Drag the 'GroundCheck' object here
     public float groundCheckRadius = 0.2f;
-    public LayerMask groundLayer;   // Set this to 'Ground' layer
+    public LayerMask groundLayer;   // MUST be set ONLY to the 'Ground' layer in Inspector
 
     // Private variables
     private Rigidbody2D rb;
@@ -36,23 +37,22 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
         // Check if holding Shift to Run
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            isRunning = true;
-        }
-        else
-        {
-            isRunning = false;
-        }
+        isRunning = Input.GetKey(KeyCode.LeftShift);
 
-        // 2. JUMP LOGIC
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        // 2. JUMP LOGIC (CRITICAL FIX: Bypasses corrupted Input Manager)
+        // Uses KeyCode.Space to guarantee one jump per press and fix input chaos.
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            // Apply upward velocity
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            
+            // Trigger the jump animation immediately
+            anim.SetBool("IsJumping", true); 
         }
 
-        // 3. COMBAT LOGIC (Left Click / Ctrl)
-        if (Input.GetButtonDown("Fire1")) 
+        // 3. COMBAT LOGIC 
+        // Using explicit key 'J' or 'Fire1' for attack safety
+        if (Input.GetKeyDown(KeyCode.J) || Input.GetButtonDown("Fire1")) 
         {
             if (Time.time > lastAttackTime + attackCooldown)
             {
@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
         // PHYSICS CALCULATIONS (Runs 50 times per second)
         
         // Check if feet are touching ground
+        // NOTE: LayerMask configuration in Inspector is critical here for the Infinite Jump fix.
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // Determine current speed (Walk vs Run)
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     void Attack()
     {
-        // Optional: Stop moving when attacking (gives weight to the punch)
+        // Optional: Stop moving when attacking
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
 
         // Trigger the animation
@@ -93,21 +94,23 @@ public class PlayerController : MonoBehaviour
 
     void UpdateAnimations()
     {
-        // LOGIC FOR ANIMATOR: 
-        // 0 = Idle
-        // 1 = Walk
-        // 2 = Run
-        
+        // LOGIC FOR ANIMATOR: 0 = Idle, 1 = Walk, 2 = Run
         float animSpeed = 0f;
 
         if (horizontalInput != 0)
         {
-            // If moving, check if running (2) or walking (1)
             animSpeed = isRunning ? 2f : 1f;
         }
 
         anim.SetFloat("Speed", animSpeed);
-        anim.SetBool("IsJumping", !isGrounded);
+        
+        // === JUMP ANIMATION LOGIC FIX (Solves nonstop animation loop) ===
+        // We set IsJumping to FALSE only when the character has landed AND is settled 
+        // (vertical velocity is near zero).
+        if (isGrounded && rb.linearVelocity.y < 0.1f && rb.linearVelocity.y > -0.1f)
+        {
+            anim.SetBool("IsJumping", false);
+        }
     }
 
     void FlipSprite()
