@@ -21,6 +21,30 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        // SAFETY CHECK: Ensure the box is hidden when the game loads
+        if (dialogueBox != null)
+        {
+            dialogueBox.SetActive(false);
+        }
+    }
+
+    void Update()
+    {
+        // IF the dialogue is open, listen for a click or key press to close it
+        if (dialogueBox.activeInHierarchy)
+        {
+            // Input.GetMouseButtonDown(0) = Left Click
+            // Input.GetKeyDown(KeyCode.Space) = Spacebar
+            // Input.GetKeyDown(KeyCode.E) = E key
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+            {
+                CloseDialogue();
+            }
+        }
+    }
+
     public void ShowDialogue(string text)
     {
         dialogueBox.SetActive(true); // Open the window
