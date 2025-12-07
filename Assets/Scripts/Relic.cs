@@ -7,6 +7,14 @@ public class Relic : MonoBehaviour
 
     private bool playerInRange = false;
 
+    // --- NEW DEBUG SECTION ---
+    void Start()
+    {
+        // If this doesn't print, the script is disabled or not attached!
+        Debug.Log("RELIC SCRIPT IS ALIVE on object: " + gameObject.name);
+    }
+    // -------------------------
+
     void Update()
     {
         // Now checks if Player is close AND presses 'E'
@@ -48,11 +56,15 @@ public class Relic : MonoBehaviour
     // Detect when player walks close
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // --- NEW DEBUG ---
+        // This prints the name of ANYTHING that touches the relic
+        Debug.Log("Collision detected with: " + collision.gameObject.name);
+        // -----------------
+
         if (collision.CompareTag("Player"))
         {
             playerInRange = true;
             Debug.Log("Player entered Relic range. Press E to interact.");
-            // Optional: Show a small UI prompt here like "Press E"
         }
     }
 
