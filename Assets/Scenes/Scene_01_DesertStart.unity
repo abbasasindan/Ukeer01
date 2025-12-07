@@ -1000,7 +1000,6 @@ GameObject:
   - component: {fileID: 624551767}
   - component: {fileID: 624551766}
   - component: {fileID: 624551771}
-  - component: {fileID: 624551772}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1198,20 +1197,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &624551772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624551765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922be57ff98a41b4694e8a7af1d0afb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteScaleCorrector
-  scaleFactor: 1.25
-  originalLocalScale: {x: 0, y: 0, z: 0}
 --- !u!1 &790092080
 GameObject:
   m_ObjectHideFlags: 0
