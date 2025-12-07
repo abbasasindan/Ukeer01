@@ -8,13 +8,17 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 6f;
     public float jumpForce = 12f;
 
+    [Header("Jump Settings")]
+    public float coyoteTime = 0.15f; // Time allowed to jump after leaving ground
+    private float coyoteTimeCounter;
+
     [Header("Combat Settings")]
-    public float attackCooldown = 0.5f; // Time between punches
+    public float attackCooldown = 0.5f; 
 
     [Header("Ground Detection")]
-    public Transform groundCheck;   // Drag the 'GroundCheck' object here
+    public Transform groundCheck;   
     public float groundCheckRadius = 0.2f;
-    public LayerMask groundLayer;   // MUST be set ONLY to the 'Ground' layer in Inspector
+    public LayerMask groundLayer;   
 
     // Private variables
     private Rigidbody2D rb;
@@ -35,23 +39,31 @@ public class PlayerController : MonoBehaviour
     {
         // 1. INPUT PROCESSING
         horizontalInput = Input.GetAxisRaw("Horizontal");
-
-        // Check if holding Shift to Run
         isRunning = Input.GetKey(KeyCode.LeftShift);
 
-        // 2. JUMP LOGIC (CRITICAL FIX: Bypasses corrupted Input Manager)
-        // Uses KeyCode.Space to guarantee one jump per press and fix input chaos.
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        // 2. JUMP LOGIC (Uses Coyote Time for reliable jumps)
+        if (Input.GetKeyDown(KeyCode.Space) && coyoteTimeCounter > 0f)
         {
             // Apply upward velocity
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             
-            // Trigger the jump animation immediately
+            // Consume the jump time so you can't double jump instantly
+            coyoteTimeCounter = 0f; 
+
+            // Force the animation state TRUE immediately upon input
             anim.SetBool("IsJumping", true); 
         }
+        
+        // Time Shift Input
+        if (Input.GetKeyDown(KeyCode.F)) 
+        {
+            if (TimeManager.instance != null)
+            {
+                TimeManager.instance.ToggleRealityShift();
+            }
+        }
 
-        // 3. COMBAT LOGIC 
-        // Using explicit key 'J' or 'Fire1' for attack safety
+        // 3. COMBAT LOGIC (Omitted for brevity)
         if (Input.GetKeyDown(KeyCode.J) || Input.GetButtonDown("Fire1")) 
         {
             if (Time.time > lastAttackTime + attackCooldown)
@@ -67,36 +79,36 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // PHYSICS CALCULATIONS (Runs 50 times per second)
-        
         // Check if feet are touching ground
-        // NOTE: LayerMask configuration in Inspector is critical here for the Infinite Jump fix.
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
+        // --- COYOTE TIME TRACKER ---
+        if (isGrounded)
+        {
+            coyoteTimeCounter = coyoteTime; // Reset counter when grounded
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.fixedDeltaTime; // Count down when airborne
+        }
+        
         // Determine current speed (Walk vs Run)
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
-
+        
         // Apply Movement
         rb.linearVelocity = new Vector2(horizontalInput * currentSpeed, rb.linearVelocity.y);
     }
 
     void Attack()
     {
-        // Optional: Stop moving when attacking
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-
-        // Trigger the animation
         anim.SetTrigger("Attack");
-        
-        // Reset timer
         lastAttackTime = Time.time;
     }
 
     void UpdateAnimations()
     {
-        // LOGIC FOR ANIMATOR: 0 = Idle, 1 = Walk, 2 = Run
         float animSpeed = 0f;
-
         if (horizontalInput != 0)
         {
             animSpeed = isRunning ? 2f : 1f;
@@ -104,10 +116,8 @@ public class PlayerController : MonoBehaviour
 
         anim.SetFloat("Speed", animSpeed);
         
-        // === JUMP ANIMATION LOGIC FIX (Solves nonstop animation loop) ===
-        // We set IsJumping to FALSE only when the character has landed AND is settled 
-        // (vertical velocity is near zero).
-        if (isGrounded && rb.linearVelocity.y < 0.1f && rb.linearVelocity.y > -0.1f)
+        // LANDING LOGIC: If the player is confirmed grounded AND the Rigidbody is settled
+        if (isGrounded && rb.linearVelocity.y <= 0.1f)
         {
             anim.SetBool("IsJumping", false);
         }
@@ -115,7 +125,6 @@ public class PlayerController : MonoBehaviour
 
     void FlipSprite()
     {
-        // Flips the character to face the direction they are moving
         if (isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
         {
             isFacingRight = !isFacingRight;
@@ -125,7 +134,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Draws a Red Circle at the feet in Scene View to help you adjust size
     void OnDrawGizmos()
     {
         if (groundCheck != null)
