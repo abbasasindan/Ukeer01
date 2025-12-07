@@ -17,13 +17,19 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            // If a duplicate exists, destroy this object AND return immediately
+            // to prevent the rest of the code from running on a dead object.
             Destroy(gameObject);
+            return;
         }
     }
 
     void Start()
     {
-        // SAFETY CHECK: Ensure the box is hidden when the game loads
+        // Safety Check: If this instance was destroyed in Awake, stop here.
+        if (instance != this) return;
+
+        // Ensure the box is hidden when the game loads
         if (dialogueBox != null)
         {
             dialogueBox.SetActive(false);
@@ -32,12 +38,15 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
+        // Safety Check: If this instance was destroyed, stop here.
+        if (instance != this) return;
+
         // IF the dialogue is open, listen for a click or key press to close it
-        if (dialogueBox.activeInHierarchy)
+        if (dialogueBox != null && dialogueBox.activeInHierarchy)
         {
             // Input.GetMouseButtonDown(0) = Left Click
             // Input.GetKeyDown(KeyCode.Space) = Spacebar
-            // Input.GetKeyDown(KeyCode.E) = E key
+            // Input.GetKeyDown(KeyCode.Return) = Enter
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
             {
                 CloseDialogue();
@@ -47,14 +56,24 @@ public class DialogueManager : MonoBehaviour
 
     public void ShowDialogue(string text)
     {
-        dialogueBox.SetActive(true); // Open the window
-        dialogueText.text = text;    // Update the words
-        Time.timeScale = 0f;         // Pause the game
+        if (dialogueBox != null)
+        {
+            dialogueBox.SetActive(true);             // 1. Open the Panel
+            if (dialogueText != null)
+            {
+                dialogueText.gameObject.SetActive(true); // 2. FORCE the text object to turn on
+                dialogueText.text = text;                // 3. Update the words
+            }
+            Time.timeScale = 0f;                     // 4. Pause the game
+        }
     }
 
     public void CloseDialogue()
     {
-        dialogueBox.SetActive(false); // Close the window
+        if (dialogueBox != null)
+        {
+            dialogueBox.SetActive(false); // Close the window
+        }
         Time.timeScale = 1f;          // Unpause
     }
 }
