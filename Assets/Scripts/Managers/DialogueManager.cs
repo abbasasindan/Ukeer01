@@ -1,44 +1,34 @@
 using UnityEngine;
-using TMPro; // Crucial for TextMeshPro
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public GameObject dialogueBox;       // The Black Panel
-    public TextMeshProUGUI dialogueText; // The White Text inside it
-
-    // Singleton Pattern: Lets other scripts find this easily
+    public GameObject dialogueBox;
+    public TextMeshProUGUI dialogueText;
     public static DialogueManager instance;
 
     void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (instance == null) instance = this;
+        else { Destroy(gameObject); return; }
     }
 
     void Start()
     {
-        // SAFETY CHECK: Ensure the box is hidden when the game loads
-        if (dialogueBox != null)
-        {
+        if (instance == this && dialogueBox != null)
             dialogueBox.SetActive(false);
-        }
     }
 
     void Update()
     {
-        // IF the dialogue is open, listen for a click or key press to close it
-        if (dialogueBox.activeInHierarchy)
+        if (instance != this) return;
+
+        // IF dialogue is open, listen for close input
+        if (dialogueBox != null && dialogueBox.activeInHierarchy)
         {
-            // Input.GetMouseButtonDown(0) = Left Click
-            // Input.GetKeyDown(KeyCode.Space) = Spacebar
-            // Input.GetKeyDown(KeyCode.E) = E key
-            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+            // ADDED: KeyCode.E so controls are consistent with Interactable.cs
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)
+                || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))
             {
                 CloseDialogue();
             }
@@ -47,14 +37,24 @@ public class DialogueManager : MonoBehaviour
 
     public void ShowDialogue(string text)
     {
-        dialogueBox.SetActive(true); // Open the window
-        dialogueText.text = text;    // Update the words
-        Time.timeScale = 0f;         // Pause the game
+        if (dialogueBox != null)
+        {
+            dialogueBox.SetActive(true);
+            if (dialogueText != null)
+            {
+                dialogueText.gameObject.SetActive(true);
+                dialogueText.text = text;
+            }
+            Time.timeScale = 0f;
+        }
     }
 
     public void CloseDialogue()
     {
-        dialogueBox.SetActive(false); // Close the window
-        Time.timeScale = 1f;          // Unpause
+        if (dialogueBox != null)
+        {
+            dialogueBox.SetActive(false);
+        }
+        Time.timeScale = 1f;
     }
 }

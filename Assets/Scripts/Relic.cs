@@ -9,7 +9,7 @@ public class Relic : MonoBehaviour
 
     void Update()
     {
-        // Now checks if Player is close AND presses 'E'
+        // Check if Player is close AND presses 'E'
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             PickUpRelic();
@@ -30,7 +30,7 @@ public class Relic : MonoBehaviour
             DialogueManager.instance.ShowDialogue(message);
         }
 
-        // 3. Destroy the relic (so you can't pick it up twice)
+        // 3. Destroy the relic
         Destroy(gameObject);
     }
 
@@ -40,7 +40,6 @@ public class Relic : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInRange = true;
-            // Optional: Show a small UI prompt here like "Press E"
         }
     }
 
