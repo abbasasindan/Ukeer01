@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [Header("Ground Detection")]
     public Transform groundCheck;   
     public float groundCheckRadius = 0.2f;
-    public LayerMask groundLayer;   
+    public LayerMask groundLayer;   // MUST be set ONLY to the 'Ground' layer in Inspector
 
     // Private variables
     private Rigidbody2D rb;
@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         isRunning = Input.GetKey(KeyCode.LeftShift);
 
         // 2. JUMP LOGIC (Uses Coyote Time for reliable jumps)
+        // Jump fires if the Coyote Time hasn't expired (coyoteTimeCounter > 0)
         if (Input.GetKeyDown(KeyCode.Space) && coyoteTimeCounter > 0f)
         {
             // Apply upward velocity
@@ -54,16 +55,17 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("IsJumping", true); 
         }
         
-        // Time Shift Input
+        // 3. TIME SHIFT INPUT (Flashback Gate Fix)
         if (Input.GetKeyDown(KeyCode.F)) 
         {
-            if (TimeManager.instance != null)
+            // CRITICAL CHECK: Only allow the shift if TimeManager confirms the ability is unlocked
+            if (TimeManager.instance != null && TimeManager.instance.IsTimeAbilityUnlocked())
             {
                 TimeManager.instance.ToggleRealityShift();
             }
         }
 
-        // 3. COMBAT LOGIC (Omitted for brevity)
+        // 4. COMBAT LOGIC 
         if (Input.GetKeyDown(KeyCode.J) || Input.GetButtonDown("Fire1")) 
         {
             if (Time.time > lastAttackTime + attackCooldown)
@@ -72,7 +74,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // 4. VISUALS
+        // 5. VISUALS
         UpdateAnimations();
         FlipSprite();
     }
@@ -95,7 +97,7 @@ public class PlayerController : MonoBehaviour
         // Determine current speed (Walk vs Run)
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
         
-        // Apply Movement
+        // Apply Movement (Trusting the Static Collider to handle the vertical stop)
         rb.linearVelocity = new Vector2(horizontalInput * currentSpeed, rb.linearVelocity.y);
     }
 

@@ -57,4 +57,27 @@ public class DialogueManager : MonoBehaviour
         }
         Time.timeScale = 1f;
     }
+
+    // === NEW: METHOD FOR PAST WORLD TEXT VISIBILITY ===
+    // This method is called by the TimeManager to toggle the persistent past world text.
+    public void SetPastWorldTextVisibility(bool isVisible)
+    {
+        // The DialoguePanel variable should be assigned in the Inspector
+        if (dialogueBox != null)
+        {
+            // Toggle the visibility of the dialogue box/panel
+            dialogueBox.SetActive(isVisible);
+            
+            // Set the static text content if the panel is being made visible
+            if (dialogueText != null && isVisible) 
+            {
+                // Ensure the text component itself is active (optional, but safe)
+                dialogueText.gameObject.SetActive(true); 
+                
+                // Set the specific past-world text
+                dialogueText.text = "The past whispers..."; 
+            }
+        }
+        // NOTE: We do NOT set Time.timeScale = 0f here, as this is background text.
+    }
 }
