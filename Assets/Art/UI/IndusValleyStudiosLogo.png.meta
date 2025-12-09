@@ -1,52 +1,61 @@
 fileFormatVersion: 2
-guid: 792a2e1ea45951547bd3f07baac818e3
+guid: 42f09a967cd17ff42b5df4b032cc4333
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3038869418936875886
-    second: IndusValleyStudios_Logo_0
+      213: -9111987292987481953
+    second: IndusValleyStudiosLogo_0
   - first:
-      213: 6832731493911555462
-    second: IndusValleyStudios_Logo_1
+      213: -282388781520827866
+    second: IndusValleyStudiosLogo_1
   - first:
-      213: 4414780116411396507
-    second: IndusValleyStudios_Logo_2
+      213: -876740176532017399
+    second: IndusValleyStudiosLogo_2
   - first:
-      213: 5434537767234735258
-    second: IndusValleyStudios_Logo_3
+      213: -6847846809632530843
+    second: IndusValleyStudiosLogo_3
   - first:
-      213: 2984452961584262197
-    second: IndusValleyStudios_Logo_4
+      213: 4480357304545872890
+    second: IndusValleyStudiosLogo_4
   - first:
-      213: 3067203884420785994
-    second: IndusValleyStudios_Logo_5
+      213: -4307431352036412495
+    second: IndusValleyStudiosLogo_5
   - first:
-      213: 2762260935023889706
-    second: IndusValleyStudios_Logo_6
+      213: -2723368759568077067
+    second: IndusValleyStudiosLogo_6
   - first:
-      213: 4730289381270495113
-    second: IndusValleyStudios_Logo_7
+      213: -2992429538636294914
+    second: IndusValleyStudiosLogo_7
   - first:
-      213: -5707921325725730199
-    second: IndusValleyStudios_Logo_8
+      213: -7197875905958312514
+    second: IndusValleyStudiosLogo_8
   - first:
-      213: 2645698694976334455
-    second: IndusValleyStudios_Logo_9
+      213: -9090889244684498037
+    second: IndusValleyStudiosLogo_9
   - first:
-      213: -3519755115108196114
-    second: IndusValleyStudios_Logo_10
+      213: 6700767238345325658
+    second: IndusValleyStudiosLogo_10
   - first:
-      213: 5939521201321679105
-    second: IndusValleyStudios_Logo_11
+      213: -3674190306560262083
+    second: IndusValleyStudiosLogo_11
   - first:
-      213: 2203864785913561649
-    second: IndusValleyStudios_Logo_12
+      213: 8603453137617105824
+    second: IndusValleyStudiosLogo_12
   - first:
-      213: 7703813228515201859
-    second: IndusValleyStudios_Logo_13
+      213: 5535190857873058626
+    second: IndusValleyStudiosLogo_13
   - first:
-      213: -3912773332761466446
-    second: IndusValleyStudios_Logo_14
+      213: -552530940808719380
+    second: IndusValleyStudiosLogo_14
+  - first:
+      213: 7549723622639103716
+    second: IndusValleyStudiosLogo_15
+  - first:
+      213: -3761883004345815197
+    second: IndusValleyStudiosLogo_16
+  - first:
+      213: 2205461317874206332
+    second: IndusValleyStudiosLogo_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -155,13 +164,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_0
+      name: IndusValleyStudiosLogo_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 636
-        height: 1024
+        x: 83
+        y: 164
+        width: 116
+        height: 177
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e6bb78ac2ab3c2a20800000000000000
-      internalID: 3038869418936875886
+      spriteID: f90ab9b95d7bb8180800000000000000
+      internalID: -9111987292987481953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_1
+      name: IndusValleyStudiosLogo_1
       rect:
         serializedVersion: 2
-        x: 438
-        y: 466
-        width: 70
-        height: 106
+        x: 215
+        y: 251
+        width: 9
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +201,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68de834a71db2de50800000000000000
-      internalID: 6832731493911555462
+      spriteID: 62a45ec36e0c41cf0800000000000000
+      internalID: -282388781520827866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_2
+      name: IndusValleyStudiosLogo_2
       rect:
         serializedVersion: 2
-        x: 441
-        y: 516
+        x: 226
+        y: 251
         width: 19
-        height: 59
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b91b8281023744d30800000000000000
-      internalID: 4414780116411396507
+      spriteID: 90fee71647135d3f0800000000000000
+      internalID: -876740176532017399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_3
+      name: IndusValleyStudiosLogo_3
       rect:
         serializedVersion: 2
-        x: 472
-        y: 466
-        width: 88
-        height: 106
+        x: 247
+        y: 251
+        width: 18
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9c887e4e4b5b6b40800000000000000
-      internalID: 5434537767234735258
+      spriteID: 56e9f8bab9f87f0a0800000000000000
+      internalID: -6847846809632530843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_4
+      name: IndusValleyStudiosLogo_4
       rect:
         serializedVersion: 2
-        x: 544
-        y: 515
-        width: 76
-        height: 57
+        x: 265
+        y: 251
+        width: 19
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +267,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53ca7100828ea6920800000000000000
-      internalID: 2984452961584262197
+      spriteID: afb88440b3d6d2e30800000000000000
+      internalID: 4480357304545872890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_5
+      name: IndusValleyStudiosLogo_5
       rect:
         serializedVersion: 2
-        x: 558
-        y: 482
-        width: 8
-        height: 11
+        x: 285
+        y: 251
+        width: 19
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,20 +289,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a476990aea5e09a20800000000000000
-      internalID: 3067203884420785994
+      spriteID: 1b33d7fc10ee834c0800000000000000
+      internalID: -4307431352036412495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_6
+      name: IndusValleyStudiosLogo_6
       rect:
         serializedVersion: 2
-        x: 561
-        y: 479
-        width: 6
-        height: 6
+        x: 312
+        y: 251
+        width: 20
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,20 +311,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2d89017fa5855620800000000000000
-      internalID: 2762260935023889706
+      spriteID: 5fe6c8dca86a43ad0800000000000000
+      internalID: -2723368759568077067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_7
+      name: IndusValleyStudiosLogo_7
       rect:
         serializedVersion: 2
-        x: 566
-        y: 465
-        width: 44
-        height: 45
+        x: 329
+        y: 251
+        width: 20
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,20 +333,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98f1e6f412d55a140800000000000000
-      internalID: 4730289381270495113
+      spriteID: ef4923e6031c876d0800000000000000
+      internalID: -2992429538636294914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_8
+      name: IndusValleyStudiosLogo_8
       rect:
         serializedVersion: 2
-        x: 612
-        y: 485
-        width: 7
-        height: 9
+        x: 347
+        y: 251
+        width: 18
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96abd3ecbc369c0b0800000000000000
-      internalID: -5707921325725730199
+      spriteID: eb50300eff10c1c90800000000000000
+      internalID: -7197875905958312514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_9
+      name: IndusValleyStudiosLogo_9
       rect:
         serializedVersion: 2
-        x: 614
-        y: 464
-        width: 30
-        height: 48
+        x: 363
+        y: 251
+        width: 17
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +377,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 77a67c012f867b420800000000000000
-      internalID: 2645698694976334455
+      spriteID: b8b4926c56ca6d180800000000000000
+      internalID: -9090889244684498037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_10
+      name: IndusValleyStudiosLogo_10
       rect:
         serializedVersion: 2
-        x: 637
-        y: 4
-        width: 383
-        height: 1016
+        x: 380
+        y: 251
+        width: 17
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -390,20 +399,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee0ac9b0f51572fc0800000000000000
-      internalID: -3519755115108196114
+      spriteID: a5cf5241d48edfc50800000000000000
+      internalID: 6700767238345325658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_11
+      name: IndusValleyStudiosLogo_11
       rect:
         serializedVersion: 2
-        x: 640
-        y: 514
-        width: 43
-        height: 59
+        x: 396
+        y: 251
+        width: 19
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,20 +421,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1091eac401b6d6250800000000000000
-      internalID: 5939521201321679105
+      spriteID: d30ca440267a20dc0800000000000000
+      internalID: -3674190306560262083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_12
+      name: IndusValleyStudiosLogo_12
       rect:
         serializedVersion: 2
-        x: 672
-        y: 516
-        width: 41
-        height: 55
+        x: 215
+        y: 226
+        width: 15
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,20 +443,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 132ce51a853b59e10800000000000000
-      internalID: 2203864785913561649
+      spriteID: 0a3336dab0b956770800000000000000
+      internalID: 8603453137617105824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_13
+      name: IndusValleyStudiosLogo_13
       rect:
         serializedVersion: 2
-        x: 715
-        y: 516
+        x: 230
+        y: 226
         width: 29
-        height: 64
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -456,20 +465,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3439a95905179ea60800000000000000
-      internalID: 7703813228515201859
+      spriteID: 24b638f22c2f0dc40800000000000000
+      internalID: 5535190857873058626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IndusValleyStudios_Logo_14
+      name: IndusValleyStudiosLogo_14
       rect:
         serializedVersion: 2
-        x: 748
-        y: 515
-        width: 30
-        height: 56
+        x: 259
+        y: 227
+        width: 15
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,8 +487,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b9a126726903b9c0800000000000000
-      internalID: -3912773332761466446
+      spriteID: ce31fa969040558f0800000000000000
+      internalID: -552530940808719380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IndusValleyStudiosLogo_15
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 227
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ee67c772a106c860800000000000000
+      internalID: 7549723622639103716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IndusValleyStudiosLogo_16
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 226
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f636fb65b1bcbc0800000000000000
+      internalID: -3761883004345815197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IndusValleyStudiosLogo_17
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 226
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76c1c1326f5b9e10800000000000000
+      internalID: 2205461317874206332
       vertices: []
       indices: 
       edges: []
@@ -498,21 +573,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IndusValleyStudios_Logo_0: 3038869418936875886
-      IndusValleyStudios_Logo_1: 6832731493911555462
-      IndusValleyStudios_Logo_10: -3519755115108196114
-      IndusValleyStudios_Logo_11: 5939521201321679105
-      IndusValleyStudios_Logo_12: 2203864785913561649
-      IndusValleyStudios_Logo_13: 7703813228515201859
-      IndusValleyStudios_Logo_14: -3912773332761466446
-      IndusValleyStudios_Logo_2: 4414780116411396507
-      IndusValleyStudios_Logo_3: 5434537767234735258
-      IndusValleyStudios_Logo_4: 2984452961584262197
-      IndusValleyStudios_Logo_5: 3067203884420785994
-      IndusValleyStudios_Logo_6: 2762260935023889706
-      IndusValleyStudios_Logo_7: 4730289381270495113
-      IndusValleyStudios_Logo_8: -5707921325725730199
-      IndusValleyStudios_Logo_9: 2645698694976334455
+      IndusValleyStudiosLogo_0: -9111987292987481953
+      IndusValleyStudiosLogo_1: -282388781520827866
+      IndusValleyStudiosLogo_10: 6700767238345325658
+      IndusValleyStudiosLogo_11: -3674190306560262083
+      IndusValleyStudiosLogo_12: 8603453137617105824
+      IndusValleyStudiosLogo_13: 5535190857873058626
+      IndusValleyStudiosLogo_14: -552530940808719380
+      IndusValleyStudiosLogo_15: 7549723622639103716
+      IndusValleyStudiosLogo_16: -3761883004345815197
+      IndusValleyStudiosLogo_17: 2205461317874206332
+      IndusValleyStudiosLogo_2: -876740176532017399
+      IndusValleyStudiosLogo_3: -6847846809632530843
+      IndusValleyStudiosLogo_4: 4480357304545872890
+      IndusValleyStudiosLogo_5: -4307431352036412495
+      IndusValleyStudiosLogo_6: -2723368759568077067
+      IndusValleyStudiosLogo_7: -2992429538636294914
+      IndusValleyStudiosLogo_8: -7197875905958312514
+      IndusValleyStudiosLogo_9: -9090889244684498037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
