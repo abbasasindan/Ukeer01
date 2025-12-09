@@ -1,8 +1,5 @@
 using UnityEngine;
 
-// Ensure DialogueManager is included (implicitly assumed, but good practice)
-// public class DialogueManager : MonoBehaviour { ... } 
-
 public class TimeManager : MonoBehaviour
 {
     // === 1. SINGLETON INSTANCE DECLARATION ===
@@ -35,14 +32,10 @@ public class TimeManager : MonoBehaviour
         }
         
         // --- INITIALIZE REFERENCES IN CODE ---
-        // Find the root environment containers by their exact name in the scene.
         Environment_Present = GameObject.Find("Environment_Present");
         Environment_Past = GameObject.Find("Environment_Past");
-        
-        // Find the Dialogue Panel by name
         pastWorldTextPanel = GameObject.Find(DialoguePanelName);
 
-        // Ensure the ability starts locked
         timeAbilityUnlocked = false;
         isPastActive = false;
         
@@ -53,7 +46,7 @@ public class TimeManager : MonoBehaviour
             Environment_Past.SetActive(false);  
             
         // Set the text panel to OFF initially
-        // We ensure it is off here, but all future control goes through DialogueManager
+        // We use the direct SetActive here for initial state
         if (pastWorldTextPanel != null)
             pastWorldTextPanel.SetActive(false); 
     }
@@ -72,7 +65,7 @@ public class TimeManager : MonoBehaviour
         return timeAbilityUnlocked; 
     }
 
-    // === CORE MECHANIC: SHIFTING REALITIES (UPDATED FOR DIALOGUEMANAGER) ===
+    // === CORE MECHANIC: SHIFTING REALITIES ===
     public void ToggleRealityShift()
     {
         if (timeAbilityUnlocked)
@@ -87,7 +80,7 @@ public class TimeManager : MonoBehaviour
             if (Environment_Past != null)
                 Environment_Past.SetActive(isPastActive);
 
-            // 2. NEW CALL: Delegate UI visibility control to the DialogueManager
+            // 2. Delegate UI visibility control to the DialogueManager
             if (DialogueManager.instance != null)
             {
                 DialogueManager.instance.SetPastWorldTextVisibility(isPastActive);
