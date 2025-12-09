@@ -7,10 +7,11 @@ public class TimeManager : MonoBehaviour
 
     // === 2. ENVIRONMENT REFERENCES ===
     [Header("Environment References")]
+    // These are found via code to be robust against team changes
     private GameObject Environment_Present; 
     private GameObject Environment_Past; 
 
-    // === 3. UI REFERENCE (Used internally for initialization only) ===
+    // === 3. UI REFERENCE ===
     private const string DialoguePanelName = "Dialogue_Panel";
     private GameObject pastWorldTextPanel;
 
@@ -46,7 +47,6 @@ public class TimeManager : MonoBehaviour
             Environment_Past.SetActive(false);  
             
         // Set the text panel to OFF initially
-        // We use the direct SetActive here for initial state
         if (pastWorldTextPanel != null)
             pastWorldTextPanel.SetActive(false); 
     }
@@ -65,22 +65,37 @@ public class TimeManager : MonoBehaviour
         return timeAbilityUnlocked; 
     }
 
-    // === CORE MECHANIC: SHIFTING REALITIES ===
+    // === CORE MECHANIC: SHIFTING REALITIES (SYNCHRONIZATION ADDED) ===
     public void ToggleRealityShift()
     {
         if (timeAbilityUnlocked)
         {
-            // Flip the state
+            // 1. Flip the state
             isPastActive = !isPastActive;
             
-            // 1. Toggle the visibility of the two main environment containers
+            // 2. CRITICAL SYNCHRONIZATION STEP: Match the position of the inactive world to the active one.
+            if (Environment_Present != null && Environment_Past != null)
+            {
+                if (isPastActive)
+                {
+                    // Moving to PAST: Set PAST position equal to PRESENT position.
+                    Environment_Past.transform.position = Environment_Present.transform.position;
+                }
+                else
+                {
+                    // Moving to PRESENT: Set PRESENT position equal to PAST position.
+                    Environment_Present.transform.position = Environment_Past.transform.position;
+                }
+            }
+            
+            // 3. Toggle the visibility of the two main environment containers
             if (Environment_Present != null)
                 Environment_Present.SetActive(!isPastActive);
             
             if (Environment_Past != null)
                 Environment_Past.SetActive(isPastActive);
 
-            // 2. Delegate UI visibility control to the DialogueManager
+            // 4. Delegate UI visibility control to the DialogueManager
             if (DialogueManager.instance != null)
             {
                 DialogueManager.instance.SetPastWorldTextVisibility(isPastActive);
