@@ -10,7 +10,7 @@ public class TimeManager : MonoBehaviour
     private GameObject Environment_Present; 
     private GameObject Environment_Past; 
 
-    // === 3. UI REFERENCE (Used internally for initialization only) ===
+    // === 3. UI REFERENCE ===
     private const string DialoguePanelName = "Dialogue_Panel";
     private GameObject pastWorldTextPanel;
 
@@ -46,7 +46,6 @@ public class TimeManager : MonoBehaviour
             Environment_Past.SetActive(false);  
             
         // Set the text panel to OFF initially
-        // We use the direct SetActive here for initial state
         if (pastWorldTextPanel != null)
             pastWorldTextPanel.SetActive(false); 
     }
@@ -65,22 +64,49 @@ public class TimeManager : MonoBehaviour
         return timeAbilityUnlocked; 
     }
 
-    // === CORE MECHANIC: SHIFTING REALITIES ===
+    // === CORE MECHANIC: SHIFTING REALITIES (SYNCHRONIZATION & PARALLAX RESET) ===
     public void ToggleRealityShift()
     {
         if (timeAbilityUnlocked)
         {
-            // Flip the state
+            // 1. Flip the state and determine worlds
             isPastActive = !isPastActive;
             
-            // 1. Toggle the visibility of the two main environment containers
+            GameObject worldToActivate; 
+            GameObject worldToDeactivate; 
+
+            if (isPastActive)
+            {
+                worldToActivate = Environment_Past;
+                worldToDeactivate = Environment_Present;
+            }
+            else
+            {
+                worldToActivate = Environment_Present;
+                worldToDeactivate = Environment_Past;
+            }
+
+            // 2. CRITICAL SYNCHRONIZATION: Move the world to be activated to the exact X-position
+            if (worldToActivate != null && worldToDeactivate != null)
+            {
+                Vector3 targetPosition = worldToDeactivate.transform.position;
+                
+                // Only copy the X position (where the player is looking), preserving original Y/Z vertical alignment.
+                worldToActivate.transform.position = new Vector3(
+                    targetPosition.x,
+                    worldToActivate.transform.position.y,
+                    worldToActivate.transform.position.z
+                );
+            }
+            
+            // 3. Toggle visibility (This triggers OnEnable() on the activated Parallax layers)
             if (Environment_Present != null)
                 Environment_Present.SetActive(!isPastActive);
             
             if (Environment_Past != null)
                 Environment_Past.SetActive(isPastActive);
 
-            // 2. Delegate UI visibility control to the DialogueManager
+            // 4. Delegate UI visibility control
             if (DialogueManager.instance != null)
             {
                 DialogueManager.instance.SetPastWorldTextVisibility(isPastActive);

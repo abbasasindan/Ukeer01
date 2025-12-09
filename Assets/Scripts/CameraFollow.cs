@@ -1,54 +1,31 @@
 using UnityEngine;
 
-public class ParallaxController : MonoBehaviour
+public class CameraFollow : MonoBehaviour
 {
-    [Header("World A Layers (Present)")]
-    // Drag ALL present-world background layers here
-    public Transform[] presentBackgroundLayers; 
+    [Header("Target & Speed")]
+    // Drag your Player GameObject here in the Inspector
+    public Transform target;
     
-    [Header("World B Layers (Past)")]
-    // Drag ALL past-world background layers here
-    public Transform[] pastBackgroundLayers; 
+    // Controls how smoothly the camera tracks the player (e.g., 5f to 10f)
+    public float smoothing = 5f; 
 
-    [Header("Parallax Settings")]
-    // This array holds the speed for each layer, matching the order in the arrays above
-    public float[] parallaxSpeeds; 
-    
-    private Vector3 lastCameraPosition;
-
-    void Start()
-    {
-        lastCameraPosition = transform.position;
-        // Basic check for array length consistency
-        if (presentBackgroundLayers.Length != pastBackgroundLayers.Length || 
-            presentBackgroundLayers.Length != parallaxSpeeds.Length)
-        {
-            Debug.LogError("Parallax setup error: Mismatch in the number of layers or speeds between worlds.");
-        }
-    }
+    // The desired offset from the player (determines camera height/depth)
+    public Vector3 offset = new Vector3(0f, 1f, -10f); 
 
     void LateUpdate()
     {
-        // Calculate how much the camera has moved since the last frame
-        Vector3 deltaMovement = transform.position - lastCameraPosition;
+        // 1. Check if the target (Player) exists
+        if (target == null) return;
+        
+        // 2. Calculate the desired position
+        Vector3 targetCameraPosition = target.position + offset;
 
-        // Loop through the speeds array (since both layer arrays have the same length)
-        for (int i = 0; i < parallaxSpeeds.Length; i++)
-        {
-            float parallaxX = deltaMovement.x * parallaxSpeeds[i];
-            
-            // 1. Move the Present (World A) Layer
-            Vector3 presentTargetPos = presentBackgroundLayers[i].position;
-            presentTargetPos.x += parallaxX;
-            presentBackgroundLayers[i].position = presentTargetPos;
-
-            // 2. Move the Past (World B) Layer
-            Vector3 pastTargetPos = pastBackgroundLayers[i].position;
-            pastTargetPos.x += parallaxX;
-            pastBackgroundLayers[i].position = pastTargetPos;
-        }
-
-        // Update the camera's position for the next frame
-        lastCameraPosition = transform.position;
+        // 3. Smoothly move the camera to the desired position
+        // Vector3.Lerp moves the camera gradually toward the target for smooth tracking.
+        transform.position = Vector3.Lerp(
+            transform.position, 
+            targetCameraPosition, 
+            smoothing * Time.deltaTime
+        );
     }
 }
