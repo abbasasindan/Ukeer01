@@ -7,7 +7,6 @@ public class TimeManager : MonoBehaviour
 
     // === 2. ENVIRONMENT REFERENCES ===
     [Header("Environment References")]
-    // These are found via code to be robust against team changes
     private GameObject Environment_Present; 
     private GameObject Environment_Past; 
 
@@ -65,37 +64,49 @@ public class TimeManager : MonoBehaviour
         return timeAbilityUnlocked; 
     }
 
-    // === CORE MECHANIC: SHIFTING REALITIES (SYNCHRONIZATION ADDED) ===
+    // === CORE MECHANIC: SHIFTING REALITIES (SYNCHRONIZATION & PARALLAX RESET) ===
     public void ToggleRealityShift()
     {
         if (timeAbilityUnlocked)
         {
-            // 1. Flip the state
+            // 1. Flip the state and determine worlds
             isPastActive = !isPastActive;
             
-            // 2. CRITICAL SYNCHRONIZATION STEP: Match the position of the inactive world to the active one.
-            if (Environment_Present != null && Environment_Past != null)
+            GameObject worldToActivate; 
+            GameObject worldToDeactivate; 
+
+            if (isPastActive)
             {
-                if (isPastActive)
-                {
-                    // Moving to PAST: Set PAST position equal to PRESENT position.
-                    Environment_Past.transform.position = Environment_Present.transform.position;
-                }
-                else
-                {
-                    // Moving to PRESENT: Set PRESENT position equal to PAST position.
-                    Environment_Present.transform.position = Environment_Past.transform.position;
-                }
+                worldToActivate = Environment_Past;
+                worldToDeactivate = Environment_Present;
+            }
+            else
+            {
+                worldToActivate = Environment_Present;
+                worldToDeactivate = Environment_Past;
+            }
+
+            // 2. CRITICAL SYNCHRONIZATION: Move the world to be activated to the exact X-position
+            if (worldToActivate != null && worldToDeactivate != null)
+            {
+                Vector3 targetPosition = worldToDeactivate.transform.position;
+                
+                // Only copy the X position (where the player is looking), preserving original Y/Z vertical alignment.
+                worldToActivate.transform.position = new Vector3(
+                    targetPosition.x,
+                    worldToActivate.transform.position.y,
+                    worldToActivate.transform.position.z
+                );
             }
             
-            // 3. Toggle the visibility of the two main environment containers
+            // 3. Toggle visibility (This triggers OnEnable() on the activated Parallax layers)
             if (Environment_Present != null)
                 Environment_Present.SetActive(!isPastActive);
             
             if (Environment_Past != null)
                 Environment_Past.SetActive(isPastActive);
 
-            // 4. Delegate UI visibility control to the DialogueManager
+            // 4. Delegate UI visibility control
             if (DialogueManager.instance != null)
             {
                 DialogueManager.instance.SetPastWorldTextVisibility(isPastActive);
