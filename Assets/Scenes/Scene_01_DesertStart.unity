@@ -5195,20 +5195,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &446091669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 446091666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ac43b248f9e4e54ab055f857a708c1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
-  cameraTransform: {fileID: 2002438518}
-  parallaxMultiplier: 1
 --- !u!1 &586358940
 GameObject:
   m_ObjectHideFlags: 0
@@ -6190,7 +6176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 3.4699707, y: -788.49}
+  m_AnchoredPosition: {x: 2.2999878, y: -772.8}
   m_SizeDelta: {x: 29.434, y: 11.827}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &982395086
@@ -12662,7 +12648,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.05, y: -1.17}
+  m_AnchoredPosition: {x: 1.85, y: -1.24}
   m_SizeDelta: {x: 76.781, y: 26.764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794943173
