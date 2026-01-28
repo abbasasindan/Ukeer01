@@ -4,72 +4,55 @@ public class TimeManager : MonoBehaviour
 {
     public static TimeManager instance;
 
-    [Header("Environment References")]
-    private GameObject Environment_Present; 
-    private GameObject Environment_Past; 
-
-    private const string DialoguePanelName = "Dialogue_Panel";
-    private GameObject pastWorldTextPanel;
-
+    [Header("Teleport Settings")]
+    public float worldOffset = 1000f; 
     private bool timeAbilityUnlocked = false; 
     private bool isPastActive = false; 
+
+    private GameObject player;
 
     void Awake()
     {
         if (instance == null) { instance = this; }
         else { Destroy(gameObject); return; }
         
-        Environment_Present = GameObject.Find("Environment_Present");
-        Environment_Past = GameObject.Find("Environment_Past");
-        pastWorldTextPanel = GameObject.Find(DialoguePanelName);
-
-        // Start in the Present
-        if (Environment_Present != null) Environment_Present.SetActive(true);
-        if (Environment_Past != null) Environment_Past.SetActive(false);  
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
     {
-        // === THE MIRROR LOGIC ===
-        // This ensures the Past always mimics the Present's position, 
-        // effectively 'following' whatever the Present follows.
-        if (Environment_Present != null && Environment_Past != null)
-        {
-            Environment_Past.transform.position = Environment_Present.transform.position;
-        }
-
-        // Input Listener
         if (timeAbilityUnlocked && Input.GetKeyDown(KeyCode.F))
         {
             ToggleRealityShift();
         }
     }
 
-    public void UnlockAbility()
-    {
-        timeAbilityUnlocked = true;
-        Debug.Log("Ability Unlocked: Shift with 'F'");
-    }
-
-    public bool IsTimeAbilityUnlocked()
-    {
-        return timeAbilityUnlocked;
-    }
-
     public void ToggleRealityShift()
     {
-        if (timeAbilityUnlocked)
+        if (player == null) return;
+
+        isPastActive = !isPastActive;
+        
+        // Calculate the jump distance
+        float moveAmount = isPastActive ? worldOffset : -worldOffset;
+
+        // 1. Teleport the Player
+        player.transform.position += new Vector3(moveAmount, 0, 0);
+
+        // 2. Teleport the Camera so the player stays in view
+        if (Camera.main != null)
         {
-            isPastActive = !isPastActive;
+            Camera.main.transform.position += new Vector3(moveAmount, 0, 0);
+        }
 
-            // Simple visibility swap
-            if (Environment_Present != null) Environment_Present.SetActive(!isPastActive);
-            if (Environment_Past != null) Environment_Past.SetActive(isPastActive);
-
-            if (DialogueManager.instance != null)
-            {
-                DialogueManager.instance.SetPastWorldTextVisibility(isPastActive);
-            }
+        // 3. FIX THE DRIFT: Find all parallax layers and reset them
+        // Note: Using FindObjectsByType to avoid the obsolete warning in your screenshot
+        ParallaxLayer[] allLayers = Object.FindObjectsByType<ParallaxLayer>(FindObjectsSortMode.None);
+        foreach (ParallaxLayer layer in allLayers)
+        {
+            layer.ResetParallaxTracking();
         }
     }
+
+    public void UnlockAbility() { timeAbilityUnlocked = true; }
 }

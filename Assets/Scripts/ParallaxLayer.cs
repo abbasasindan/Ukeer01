@@ -7,12 +7,10 @@ public class ParallaxLayer : MonoBehaviour
     public float parallaxMultiplier = 1.0f; 
 
     private Vector3 lastCameraPosition;
-    // Store the initial Y position relative to the root Environment object
     private float initialY; 
 
     void Start()
     {
-        // Store the starting Y position
         initialY = transform.position.y;
         InitializeTracking();
     }
@@ -25,27 +23,27 @@ public class ParallaxLayer : MonoBehaviour
         }
     }
 
+    // This is called by TimeManager.cs the moment the teleport happens
+    public void ResetParallaxTracking()
+    {
+        InitializeTracking();
+    }
+
     void LateUpdate()
     {
         if (cameraTransform == null) return;
         
+        // Calculate the camera movement since the last frame
         Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
 
-        // Apply parallax only to the X-axis movement
+        // Move the layer based on the camera movement and multiplier
         Vector3 newPosition = transform.position;
         newPosition.x += deltaMovement.x * parallaxMultiplier;
         
-        // CRITICAL FIX: Lock the Y position to the initial starting Y value 
-        // to prevent any vertical drift or unwanted movement.
+        // Keep the Y locked to initial height
         newPosition.y = initialY;
 
         transform.position = newPosition;
         lastCameraPosition = cameraTransform.position;
-    }
-
-    // Public method called by TimeManager.cs
-    public void ResetParallaxTracking()
-    {
-        InitializeTracking();
     }
 }
