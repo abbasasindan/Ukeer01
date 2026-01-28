@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
+    // === 1. SINGLETON INSTANCE DECLARATION ===
     public static TimeManager instance;
 
     [Header("Teleport Settings")]
@@ -13,8 +14,16 @@ public class TimeManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null) { instance = this; }
-        else { Destroy(gameObject); return; }
+        // === SINGLETON IMPLEMENTATION LOGIC ===
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
         
         player = GameObject.FindGameObjectWithTag("Player");
     }
