@@ -12,10 +12,14 @@ public class ParallaxLayer : MonoBehaviour
     void Start()
     {
         initialY = transform.position.y;
-        InitializeTracking();
+        if (cameraTransform == null && Camera.main != null) 
+            cameraTransform = Camera.main.transform;
+            
+        ResetParallaxTracking();
     }
-    
-    private void InitializeTracking()
+
+    // This is called by TimeManager during the teleport jump
+    public void ResetParallaxTracking()
     {
         if (cameraTransform != null)
         {
@@ -23,27 +27,18 @@ public class ParallaxLayer : MonoBehaviour
         }
     }
 
-    // This is called by TimeManager.cs the moment the teleport happens
-    public void ResetParallaxTracking()
-    {
-        InitializeTracking();
-    }
-
     void LateUpdate()
     {
         if (cameraTransform == null) return;
         
-        // Calculate the camera movement since the last frame
         Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
 
-        // Move the layer based on the camera movement and multiplier
-        Vector3 newPosition = transform.position;
-        newPosition.x += deltaMovement.x * parallaxMultiplier;
-        
-        // Keep the Y locked to initial height
-        newPosition.y = initialY;
+        // Apply movement
+        Vector3 newPos = transform.position;
+        newPos.x += deltaMovement.x * parallaxMultiplier;
+        newPos.y = initialY; // Lock vertical position
 
-        transform.position = newPosition;
+        transform.position = newPos;
         lastCameraPosition = cameraTransform.position;
     }
 }

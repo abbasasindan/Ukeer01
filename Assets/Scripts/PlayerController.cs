@@ -16,9 +16,9 @@ public class PlayerController : MonoBehaviour
     public float attackCooldown = 0.5f; 
 
     [Header("Ground Detection")]
-    public Transform groundCheck;   
+    public Transform groundCheck;   
     public float groundCheckRadius = 0.2f;
-    public LayerMask groundLayer;   // MUST be set ONLY to the 'Ground' layer in Inspector
+    public LayerMask groundLayer;   // MUST be set ONLY to the 'Ground' layer in Inspector
 
     // Private variables
     private Rigidbody2D rb;
@@ -54,18 +54,8 @@ public class PlayerController : MonoBehaviour
             // Force the animation state TRUE immediately upon input
             anim.SetBool("IsJumping", true); 
         }
-        
-        // 3. TIME SHIFT INPUT (Flashback Gate Fix)
-        if (Input.GetKeyDown(KeyCode.F)) 
-        {
-            // CRITICAL CHECK: Only allow the shift if TimeManager confirms the ability is unlocked
-            if (TimeManager.instance != null && TimeManager.instance.IsTimeAbilityUnlocked())
-            {
-                TimeManager.instance.ToggleRealityShift();
-            }
-        }
 
-        // 4. COMBAT LOGIC 
+        // 3. COMBAT LOGIC 
         if (Input.GetKeyDown(KeyCode.J) || Input.GetButtonDown("Fire1")) 
         {
             if (Time.time > lastAttackTime + attackCooldown)
@@ -74,7 +64,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // 5. VISUALS
+        // 4. VISUALS
         UpdateAnimations();
         FlipSprite();
     }

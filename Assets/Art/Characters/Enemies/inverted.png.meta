@@ -1,0 +1,1430 @@
+fileFormatVersion: 2
+guid: 47666986cf98ac34f8f60912f8069b3f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6509160049835049144
+    second: inverted_0
+  - first:
+      213: 3976181185792760366
+    second: inverted_1
+  - first:
+      213: -691119026678335594
+    second: inverted_2
+  - first:
+      213: 7693437569493051335
+    second: inverted_3
+  - first:
+      213: 2109928353384413356
+    second: inverted_4
+  - first:
+      213: -1775075412882361542
+    second: inverted_5
+  - first:
+      213: 8204519737279738775
+    second: inverted_6
+  - first:
+      213: -2801822522498021631
+    second: inverted_7
+  - first:
+      213: -5259437761754115456
+    second: inverted_8
+  - first:
+      213: -8897019111475585204
+    second: inverted_9
+  - first:
+      213: -1430047288688184877
+    second: inverted_10
+  - first:
+      213: 8373444696670061431
+    second: inverted_11
+  - first:
+      213: 5170667204403387275
+    second: inverted_12
+  - first:
+      213: -5113734943221743684
+    second: inverted_13
+  - first:
+      213: 8760627794212301495
+    second: inverted_14
+  - first:
+      213: -3265899454747811882
+    second: inverted_15
+  - first:
+      213: 1803849170392336348
+    second: inverted_16
+  - first:
+      213: 4753475175274952168
+    second: inverted_17
+  - first:
+      213: -1417272827588365818
+    second: inverted_18
+  - first:
+      213: -8123306755088886859
+    second: inverted_19
+  - first:
+      213: -8857310803055782907
+    second: inverted_20
+  - first:
+      213: 1688942737983738853
+    second: inverted_21
+  - first:
+      213: -7260883655991466100
+    second: inverted_22
+  - first:
+      213: 6395004043040899015
+    second: inverted_23
+  - first:
+      213: 9125551586155724881
+    second: inverted_24
+  - first:
+      213: 8145338404352015430
+    second: inverted_25
+  - first:
+      213: -5222800736840260067
+    second: inverted_26
+  - first:
+      213: 4063815870623422024
+    second: inverted_27
+  - first:
+      213: -1115891384830151438
+    second: inverted_28
+  - first:
+      213: -9147592280742299438
+    second: inverted_29
+  - first:
+      213: -5246848530825086525
+    second: inverted_30
+  - first:
+      213: -8931203575908183136
+    second: inverted_31
+  - first:
+      213: -538412538891967969
+    second: inverted_32
+  - first:
+      213: 9121613757390804594
+    second: inverted_33
+  - first:
+      213: -7116570831910810388
+    second: inverted_34
+  - first:
+      213: 5069579000787600652
+    second: inverted_35
+  - first:
+      213: 1903160959228576340
+    second: inverted_36
+  - first:
+      213: 7332860537740165208
+    second: inverted_37
+  - first:
+      213: 4686083396590317459
+    second: inverted_38
+  - first:
+      213: 1807274294731091476
+    second: inverted_39
+  - first:
+      213: -7806169747481431080
+    second: inverted_40
+  - first:
+      213: -648676534433882808
+    second: inverted_41
+  - first:
+      213: 8255985899933718430
+    second: inverted_42
+  - first:
+      213: -8778098214930005515
+    second: inverted_43
+  - first:
+      213: 151349899814037767
+    second: inverted_44
+  - first:
+      213: 6247778384687773796
+    second: inverted_45
+  - first:
+      213: -7341270534584878825
+    second: inverted_46
+  - first:
+      213: -2263932497364892585
+    second: inverted_47
+  - first:
+      213: -8274948142176890900
+    second: inverted_48
+  - first:
+      213: 6590211276864707630
+    second: inverted_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: inverted_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 855
+        width: 100
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ffa63fb61daa5a0800000000000000
+      internalID: -6509160049835049144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 856
+        width: 66
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2ad4c5c8bb3e2730800000000000000
+      internalID: 3976181185792760366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_2
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 855
+        width: 66
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 697f25d28e6a866f0800000000000000
+      internalID: -691119026678335594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_3
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 856
+        width: 66
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7274735b494ca60800000000000000
+      internalID: 7693437569493051335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_4
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 856
+        width: 109
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca8b00598a8f74d10800000000000000
+      internalID: 2109928353384413356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_5
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 856
+        width: 111
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a33fd95115aad57e0800000000000000
+      internalID: -1775075412882361542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_6
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 858
+        width: 131
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7937d3d4b3f4cd170800000000000000
+      internalID: 8204519737279738775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_7
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 855
+        width: 80
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10701dea24ded19d0800000000000000
+      internalID: -2801822522498021631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_8
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 856
+        width: 145
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082de5ca839b207b0800000000000000
+      internalID: -5259437761754115456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 688
+        width: 101
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4fd2aca140778480800000000000000
+      internalID: -8897019111475585204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_10
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 689
+        width: 112
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1fab15193772ce0800000000000000
+      internalID: -1430047288688184877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_11
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 690
+        width: 138
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773c5635693743470800000000000000
+      internalID: 8373444696670061431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_12
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 689
+        width: 98
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8bd9325d66e1c740800000000000000
+      internalID: 5170667204403387275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_13
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 744
+        width: 26
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbff3c1b92d5809b0800000000000000
+      internalID: -5113734943221743684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_14
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 689
+        width: 99
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba20732090049970800000000000000
+      internalID: 8760627794212301495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_15
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 690
+        width: 118
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df5d97dfb13da2d0800000000000000
+      internalID: -3265899454747811882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_16
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 688
+        width: 111
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd74e95634f880910800000000000000
+      internalID: 1803849170392336348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_17
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 689
+        width: 121
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5b6e6ac7cb7f140800000000000000
+      internalID: 4753475175274952168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_18
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 520
+        width: 79
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60238c15fd5d45ce0800000000000000
+      internalID: -1417272827588365818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_19
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 520
+        width: 67
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3556d9b87344f80800000000000000
+      internalID: -8123306755088886859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_20
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 523
+        width: 90
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50451aea0c2841580800000000000000
+      internalID: -8857310803055782907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_21
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 520
+        width: 73
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e31f77c874507710800000000000000
+      internalID: 1688942737983738853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_22
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 522
+        width: 162
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c876031e8c82c3b90800000000000000
+      internalID: -7260883655991466100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_23
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 522
+        width: 91
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cfb3a28b4e9fb850800000000000000
+      internalID: 6395004043040899015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_24
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 519
+        width: 69
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 150805081d874ae70800000000000000
+      internalID: 9125551586155724881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_25
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 520
+        width: 97
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64cbfb67f1e0a0170800000000000000
+      internalID: 8145338404352015430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_26
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 351
+        width: 77
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16ecf3c662e487b0800000000000000
+      internalID: -5222800736840260067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_27
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 349
+        width: 69
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8469a19d003956830800000000000000
+      internalID: 4063815870623422024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_28
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 353
+        width: 109
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4b74f92be8380f0800000000000000
+      internalID: -1115891384830151438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_29
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 352
+        width: 86
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d8ff3469493d0180800000000000000
+      internalID: -9147592280742299438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_30
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 352
+        width: 112
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9f3e96f037f27b0800000000000000
+      internalID: -5246848530825086525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_31
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 349
+        width: 76
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a35b41daadfd0480800000000000000
+      internalID: -8931203575908183136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_32
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 352
+        width: 109
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f126ab406ac2788f0800000000000000
+      internalID: -538412538891967969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_33
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 352
+        width: 129
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276589b426b769e70800000000000000
+      internalID: 9121613757390804594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_34
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 184
+        width: 77
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceccc09988cdc3d90800000000000000
+      internalID: -7116570831910810388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_35
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 184
+        width: 80
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0589becd33ca5640800000000000000
+      internalID: 5069579000787600652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_36
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 185
+        width: 124
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 452063d1fc2696a10800000000000000
+      internalID: 1903160959228576340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_37
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 185
+        width: 124
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8508b73decd83c560800000000000000
+      internalID: 7332860537740165208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_38
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 185
+        width: 101
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39f2f917500580140800000000000000
+      internalID: 4686083396590317459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_39
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 186
+        width: 106
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41e242d456ab41910800000000000000
+      internalID: 1807274294731091476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_40
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 186
+        width: 127
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d3f7f839f9eaa390800000000000000
+      internalID: -7806169747481431080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_41
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 185
+        width: 126
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ddfe6f0207ff6f0800000000000000
+      internalID: -648676534433882808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_42
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 79
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97de241f67239270800000000000000
+      internalID: 8255985899933718430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_43
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 17
+        width: 90
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f14b9f8e2eed2680800000000000000
+      internalID: -8778098214930005515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_44
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 16
+        width: 123
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709e4379ee3b91200800000000000000
+      internalID: 151349899814037767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_45
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 18
+        width: 117
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 468bda6b65194b650800000000000000
+      internalID: 6247778384687773796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_46
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 18
+        width: 117
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719b60238519e1a90800000000000000
+      internalID: -7341270534584878825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_47
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 17
+        width: 113
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7544a137365e490e0800000000000000
+      internalID: -2263932497364892585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_48
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 16
+        width: 113
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef84cad18a792d80800000000000000
+      internalID: -8274948142176890900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inverted_49
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 16
+        width: 113
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c5b486d32257b50800000000000000
+      internalID: 6590211276864707630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      inverted_0: -6509160049835049144
+      inverted_1: 3976181185792760366
+      inverted_10: -1430047288688184877
+      inverted_11: 8373444696670061431
+      inverted_12: 5170667204403387275
+      inverted_13: -5113734943221743684
+      inverted_14: 8760627794212301495
+      inverted_15: -3265899454747811882
+      inverted_16: 1803849170392336348
+      inverted_17: 4753475175274952168
+      inverted_18: -1417272827588365818
+      inverted_19: -8123306755088886859
+      inverted_2: -691119026678335594
+      inverted_20: -8857310803055782907
+      inverted_21: 1688942737983738853
+      inverted_22: -7260883655991466100
+      inverted_23: 6395004043040899015
+      inverted_24: 9125551586155724881
+      inverted_25: 8145338404352015430
+      inverted_26: -5222800736840260067
+      inverted_27: 4063815870623422024
+      inverted_28: -1115891384830151438
+      inverted_29: -9147592280742299438
+      inverted_3: 7693437569493051335
+      inverted_30: -5246848530825086525
+      inverted_31: -8931203575908183136
+      inverted_32: -538412538891967969
+      inverted_33: 9121613757390804594
+      inverted_34: -7116570831910810388
+      inverted_35: 5069579000787600652
+      inverted_36: 1903160959228576340
+      inverted_37: 7332860537740165208
+      inverted_38: 4686083396590317459
+      inverted_39: 1807274294731091476
+      inverted_4: 2109928353384413356
+      inverted_40: -7806169747481431080
+      inverted_41: -648676534433882808
+      inverted_42: 8255985899933718430
+      inverted_43: -8778098214930005515
+      inverted_44: 151349899814037767
+      inverted_45: 6247778384687773796
+      inverted_46: -7341270534584878825
+      inverted_47: -2263932497364892585
+      inverted_48: -8274948142176890900
+      inverted_49: 6590211276864707630
+      inverted_5: -1775075412882361542
+      inverted_6: 8204519737279738775
+      inverted_7: -2801822522498021631
+      inverted_8: -5259437761754115456
+      inverted_9: -8897019111475585204
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
