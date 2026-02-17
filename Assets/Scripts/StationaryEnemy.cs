@@ -3,11 +3,11 @@ using UnityEngine;
 public class StationaryEnemy : MonoBehaviour
 {
     [Header("Detection Settings")]
-    public float attackRange = 2f;
+    public float attackRange = 1.5f;
     public LayerMask playerLayer;
 
     [Header("Combat Settings")]
-    public float attackCooldown = 2.0f; // 2 second pause between attacks
+    public float attackCooldown = 2.0f; 
     private float nextAttackTime;
 
     private Animator anim;
@@ -24,12 +24,13 @@ public class StationaryEnemy : MonoBehaviour
     {
         if (player == null) return;
 
+        // 1. Check distance to player
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        // Face the player
+        // 2. Flip to face player even while patrolling/standing
         FlipTowardsPlayer();
 
-        // Only attack if player is in range AND cooldown has finished
+        // 3. Attack if in range and cooldown is over
         if (distanceToPlayer <= attackRange && Time.time >= nextAttackTime)
         {
             Attack();
@@ -38,19 +39,23 @@ public class StationaryEnemy : MonoBehaviour
 
     void Attack()
     {
-        // Set the timer for the next allowed attack
         nextAttackTime = Time.time + attackCooldown;
         
-        anim.SetTrigger("Attack");
-        Debug.Log("Enemy swings! Next attack in " + attackCooldown + " seconds.");
+        if (anim != null)
+        {
+            anim.SetTrigger("Attack");
+        }
+        Debug.Log("Bandit attacks on contact!");
     }
 
     void FlipTowardsPlayer()
     {
+        // If player is to the right, scale X should be negative (based on your sprite)
+        // If player is to the left, scale X should be positive
         if (player.position.x > transform.position.x)
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        else
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        else
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 
     void OnDrawGizmosSelected()
