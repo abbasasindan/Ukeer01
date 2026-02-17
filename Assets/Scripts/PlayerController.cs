@@ -91,13 +91,34 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = new Vector2(horizontalInput * currentSpeed, rb.linearVelocity.y);
     }
 
-    void Attack()
-    {
-        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-        anim.SetTrigger("Attack");
-        lastAttackTime = Time.time;
-    }
+    [Header("Combat System")]
+public Transform attackPoint; // Reference to a child object at the fist position
+public float attackRange = 0.7f;
+public LayerMask enemyLayer;
 
+void Attack()
+{
+    // 1. Sanity check for the pivot
+    if (attackPoint == null) return;
+
+    anim.SetTrigger("Attack");
+    lastAttackTime = Time.time;
+
+    // 2. Perform a wide spatial query
+    Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
+
+    foreach (Collider2D enemy in hitEnemies)
+    {
+        // 3. HARDCODED CHECK: Use a Tag or Name filter
+        if (enemy.CompareTag("Enemy") || enemy.name.ToLower().Contains("bandit"))
+        {
+            Debug.Log($"[HARDCODE] Purging {enemy.name} from memory.");
+            
+            // This is the nuclear option: Full removal from the scene graph
+            Destroy(enemy.gameObject); 
+        }
+    }
+}
     void UpdateAnimations()
     {
         float animSpeed = 0f;
@@ -126,12 +147,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnDrawGizmos()
-    {
-        if (groundCheck != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-        }
-    }
+   void OnDrawGizmosSelected()
+{
+    if (attackPoint == null) return;
+    Gizmos.color = Color.red;
+    Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+}
 }
